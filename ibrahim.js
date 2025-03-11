@@ -345,34 +345,19 @@ function mybotpic() {
 
             if(ms.message.protocolMessage && ms.message.protocolMessage.type === 0 && (conf.ADM).toLocaleLowerCase() === 'yes' ) {
 
-                if(ms.key.fromMe || ms.message.protocolMessage.key.fromMe) { console.log('Message supprimer me concernant') ; return }
+                if(msg === null || !msg ||msg === 'undefined') {console.log('Message non trouver') ; return } 
         
-                                console.log(`Message supprimer`)
-                                let key =  ms.message.protocolMessage.key ;
-                                
+                                await zk.sendMessage(idBot,{ image : { url : './media/deleted-message.jpg'},caption : `        😈Anti-delete-message😈\n Message from @${msg.key.participant.split('@')[0]}` , mentions : [msg.key.participant]},)
+                                .then( () => {
+                                    zk.sendMessage(idBot,{forward : msg},{quoted : msg}) ;
+                                })
+                               
+                              
         
-                               try {
-        
-                                  let st = './store.json' ;
-        
-                                const data = fs.readFileSync(st, 'utf8');
-        
-                                const jsonData = JSON.parse(data);
-        
-                                    let message = jsonData.messages[key.remoteJid] ;
-                                
-                                    let msg ;
-        
-                                    for (let i = 0 ; i < message.length ; i++) {
-        
-                                        if (message[i].key.id === key.id) {
-                                            
-                                            msg = message[i] ;
-        
-                                            break 
-                                        }
-        
-                                    } 
+                               } catch (e) {
+                                    console.log(e)
+                               }
+                            }
         
                                   //  console.log(msg)
         
