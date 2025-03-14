@@ -42,8 +42,8 @@ async function loading(dest, zk) {
 zokou({
   nomCom: "alive",
   aliases: ["alive", "testing"],
-  categorie: "system",
-  reaction: "🌟"
+  categorie: "General",
+  reaction: "☠️"
 }, async (dest, zk, commandeOptions) => {
   const { ms } = commandeOptions;
 
@@ -98,9 +98,9 @@ zokou({
 
 
 zokou({
-  nomCom: 'restart2',
+  nomCom: 'restart',
   aliases: ['reboot'],
-  categorie: "system"
+  categorie: "General"
 }, async (chatId, zk, context) => {
   const { repondre, superUser } = context;
 
@@ -131,7 +131,7 @@ zokou({
 // Command to retrieve Heroku config vars
 zokou({
   nomCom: 'allvar',
-  categorie: "system"
+  categorie: "General"
 }, async (chatId, zk, context) => {
   const { repondre, superUser } = context;
 
@@ -174,7 +174,7 @@ zokou({
 // Command to set a Heroku config var
 zokou({
   nomCom: 'setvar',
-  categorie: "system"
+  categorie: "General"
 }, async (chatId, zk, context) => {
   const { repondre, superUser, arg } = context;
 
@@ -218,7 +218,7 @@ zokou({
   nomCom: "shell",
   aliases: ["getcmd", "cmd"],
   reaction: '⚔️',
-  categorie: "system"
+  categorie: "General"
 }, async (context, message, params) => {
   const { repondre: sendResponse, arg: commandArgs, superUser: Owner, auteurMessage } = params;
 
@@ -255,10 +255,10 @@ zokou({
 
 zokou(
   {
-    nomCom: 'ping1',
+    nomCom: 'ping',
     aliases: ['speed', 'latency'],
     desc: 'To check bot response time',
-    categorie: 'system', // Fixed the typo here (Categorie -> categorie)
+    categorie: 'General', // Fixed the typo here (Categorie -> categorie)
     reaction: '🌟',
     fromMe: true, // Removed quotes to make it a boolean
   },
@@ -300,10 +300,10 @@ function react(dest, zk, msg, reaction) {
 }
 
 zokou({
-  nomCom: 'uptime2',
+  nomCom: 'uptime',
   aliases: ['runtime', 'running'],
   desc: 'To check runtime',
-  categorie: 'system', // Fixed the typo here (Categorie -> categorie)
+  categorie: 'General', // Fixed the typo here (Categorie -> categorie)
   reaction: '⚔️',
   fromMe: true, // Removed quotes to make it a boolean
 }, async (dest, zk, commandeOptions) => {
@@ -342,7 +342,7 @@ function react(dest, zk, msg, reaction) {
 zokou({
   nomCom: 'update',
   aliases: ['redeploy', 'sync'],
-  categorie: "system"
+  categorie: "General"
 }, async (chatId, zk, context) => {
   const { repondre, superUser } = context;
 
@@ -397,7 +397,7 @@ zokou({
 zokou({
   nomCom: "urlget",
   aliases: ["get", "find"],
-  categorie: "system",
+  categorie: "General",
   reaction: '🛄',
 }, async (sender, zk, context) => {
   const { repondre: sendResponse, arg: args } = context;
