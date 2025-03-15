@@ -61,7 +61,7 @@
 	,
     "HEROKU_API_KEY": {
     "description": "insert your heroku api-key (this is optionnal)",
-	"value":"HRKU-1e6bb54b-0fa4-478e-978d-5f1ace317903",    
+	"value":"HRKU-fe3e4dfb-8183-4bd6-9737-968273e2416b",    
      "required" :false
     },
   "HEROKU_APP_NAME": {
@@ -109,7 +109,7 @@
   },
 	"ANTIDELETE2" : {
     "description": "if you want to enable anti delete message put yes else put no",
-    "value": "no",
+    "value": "yes",
         "required": false
 	},
   "ANTIDELETE1" : {
