@@ -55,11 +55,7 @@ zokou({ nomCom: "menu", categorie: "General" }, async (dest, zk, commandeOptions
     menuMsg += `
 ◇            ◇
 *—————✺✺✺✺—————*
-
- *©️ᴄʀɪss ᴠᴇᴠᴏ*
-
-  *ᴛᴀᴘ ᴏɴ ᴛʜᴇ ʟɪɴᴋ* *ʙᴇʟᴏᴡ ғᴏʟʟᴏᴡ ᴏᴜʀ*
-    *ᴄʜᴀɴɴᴇʟ* https://shorturl.at/10YNe                              
+ *©️ᴄʀɪss ᴠᴇᴠᴏ*                        
 *╰════════════════❂*`;
 
     var imageUrl = mybotpic();
