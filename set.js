@@ -23,7 +23,7 @@ module.exports = { session: process.env.SESSION_ID || '',
     ETAT : process.env.PRESENCE || '',
     CHATBOT : process.env.CHATBOT || 'no',
     DP : process.env.STARTING_BOT_MESSAGE || "no",
-    ADM : process.env.ANTI_DELETE_MESSAGE || 'yes',
+    ADM : process.env.ANTI_DELETE_MESSAGES || 'yes',
                   CRISS_CHATBOT : process.env.CRISS_CHATBOT || 'yes',
                 
     ANTICALL : process.env.ANTICALL || 'yes',
