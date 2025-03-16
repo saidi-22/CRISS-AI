@@ -24,8 +24,6 @@ module.exports = { session: process.env.SESSION_ID || '',
     CHATBOT : process.env.CHATBOT || 'no',
     DP : process.env.STARTING_BOT_MESSAGE || "no",
     ADM : process.env.ANTI_DELETE_MESSAGE || 'yes',
-    ANTIDELETE1 : process.env.ANTIDELETE1 || 'yes',
-                 ANTIDELETE3 : process.env.ANTIDELETE2 || 'yes',
                   CRISS_CHATBOT : process.env.CRISS_CHATBOT || 'yes',
                 
     ANTICALL : process.env.ANTICALL || 'yes',
