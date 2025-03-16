@@ -55,9 +55,12 @@ zokou({ nomCom: "menu", categorie: "General" }, async (dest, zk, commandeOptions
         menuMsg += `
 ║╰━━══••══━━••⊷
 ╰════────════◆◆◆`;
+  
     }
-
-    menuMsg += `\n> @𝐌𝐀𝐃𝐄 𝐁𝐘 𝐂𝐑𝐈𝐒𝐒 𝐕𝐄𝐕𝐎`;
+    menuMsg += `\n> ©️𝐌𝐀𝐃𝐄 𝐁𝐘 𝐂𝐑𝐈𝐒𝐒 𝐕𝐄𝐕𝐎
+    
+      *ᴛᴀᴘ ᴏɴ ᴛʜᴇ ʟɪɴᴋ* *ʙᴇʟᴏᴡ ғᴏʟʟᴏᴡ ᴏᴜʀ*
+    *ᴄʜᴀɴɴᴇʟ* https://shorturl.at/10YNe                              `;
 
     var imageUrl = mybotpic();
 
