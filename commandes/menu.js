@@ -34,13 +34,13 @@ const date = moment().format('DD/MM/YYYY');
 
   let infoMsg =  `
 ╭──────────────────❂
-┊❂╭───*𝐂𝐑𝐈𝐒𝐒 𝐌𝐃*────❂
-┊✺┊ *User* : ${s.OWNER_NAME}
-┊✺┊ *Mode* : ${mode}
-┊✺╰───────────────❂
-┊✺┊ *Time* : ${temps}  
-┊✺┊ *Ram* : ${format(os.totalmem() - os.freemem())}/${format(os.totalmem())}
-┊❂╰───────────────❂
+┃◎ ╭───*✧𝐂𝐑𝐈𝐒𝐒 𝐌𝐃✧───────❂*
+┃◆ │ *User* : ${s.OWNER_NAME}
+┃◆ │ *Mode* : ${mode}
+┃◆ ╰────────────────❂
+┃◆ │ *Time* : ${temps}  
+┃◆ │ *Ram* : ${format(os.totalmem() - os.freemem())}/${format(os.totalmem())}
+┃◎ ╰───────────────❂
 ╰──────────────────❂ \n\n`;
  
     let menuMsg=`  
@@ -48,13 +48,13 @@ const date = moment().format('DD/MM/YYYY');
 `;
 
     for (const cat in coms) {
-        menuMsg += `*╭────❂* *${cat}* *❂*`;
+        menuMsg += `*╭━━━◆ *${cat}* *◆⁠━━─••*`;
         for (const cmd of coms[cat]) {
             menuMsg += `  
-*┊✺* ${cmd}`;
+*┊◆* ${cmd}`;
         }
         menuMsg += `
-*╰═════════════❂* \n`
+*╰════────════◆◆◆* \n`
     }
 
     menuMsg += `
@@ -77,6 +77,9 @@ const date = moment().format('DD/MM/YYYY');
             }
         });
         
+            repondre(infoMsg + menuMsg);
+        }
+
         // Download and send audio
         const audioUrl = "https://files.catbox.moe/xci982.mp3";
         const audioPath = "./temp_audio.mp3";
@@ -94,9 +97,9 @@ const date = moment().format('DD/MM/YYYY');
             await zk.sendMessage(dest, { audio: { url: audioPath }, mimetype: "audio/mp4", ptt: true }, { quoted: ms });
             fs.unlinkSync(audioPath); // Delete the audio file after sending
         });
-    
-    } catch (error) {
-        console.error("Menu error: ", error);
-        repondre("🥵🥵 Menu error: " + error);
+
+    } catch (e) {
+        console.log("🥵🥵 Menu error: " + e);
+        repondre("🥵🥵 Menu error: " + e);
     }
 });
