@@ -78,8 +78,7 @@ const date = moment().format('DD/MM/YYYY');
         
 `\n`;
         
-    try  {
-
+    try {
         // Download and send audio
         const audioUrl = "https://files.catbox.moe/xci982.mp3";
         const audioPath = "./temp_audio.mp3";
