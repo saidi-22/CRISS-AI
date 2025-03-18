@@ -76,8 +76,9 @@ const date = moment().format('DD/MM/YYYY');
             }
         });
         
-            repondre(infoMsg + menuMsg);
-        }
+`\n`;
+        
+    try  {
 
         // Download and send audio
         const audioUrl = "https://files.catbox.moe/xci982.mp3";
