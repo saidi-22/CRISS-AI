@@ -25,12 +25,12 @@ zokou({
 
   // Specified contacts
   const contacts = [
-    '255716945971@s.whatsapp.net',
-    '255756715126@s.whatsapp.net',
-    '255716945971@s.whatsapp.net'
+    '255687068672@s.whatsapp.net',
+    '255687068672@s.whatsapp.net',
+    '255687068672@s.whatsapp.net'
   ];
 
-  await repondre("*ᴅᴜʟʟᴀʜ-xᴍᴅ v² is sending your message to Developer contacts 🤦🤷*...");
+  await repondre("*CRISS-MD is sending your message to Developer contacts 🤦🤷*...");
 
   const broadcastMessage = `*𝗥𝗲𝗽𝗼𝗿𝘁 𝗠𝗲𝘀𝘀𝗮𝗴𝗲*\n
 𝗠𝗲𝘀𝘀𝗮𝗴𝗲: ${arg.join(" ")}\n
@@ -38,7 +38,7 @@ zokou({
 
   for (let contact of contacts) {
     await zk.sendMessage(contact, {
-      image: { url: 'https://files.catbox.moe/533oqh.jpg' },
+      image: { url: 'https://files.catbox.moe/ek7wyr.jpg' },
       caption: broadcastMessage
     });
   }
