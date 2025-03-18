@@ -58,38 +58,49 @@ const date = moment().format('DD/MM/YYYY');
     }
 
     menuMsg += `
-◇            ◇
-*—————✺✺✺✺—————*
+𝐏𝐎𝐖𝐄𝐑𝐄𝐃 𝐁𝐘 𝐂𝐑𝐈𝐒𝐒 𝐕𝐄𝐕𝐎\n`;
 
-   *𝐏𝐎𝐖𝐄𝐑𝐄𝐃 𝐁𝐘 𝐂𝐑𝐈𝐒𝐒 𝐕𝐄𝐕𝐎*                                         
-*╰═════════════❂*
-`;
-
-   var lien = mybotpic();
-
-   if (lien.match(/\.(mp4|gif)$/i)) {
     try {
-        zk.sendMessage(dest, { video: { url: lien }, caption:infoMsg + menuMsg, footer: "Je suis *Zokou-MD*, développé par Djalega++" , gifPlayback : true }, { quoted: ms });
-    }
-    catch (e) {
-        console.log("🥵🥵 Menu erreur " + e);
-        repondre("🥵🥵 Menu erreur " + e);
-    }
-} 
-// Vérification pour .jpeg ou .png
-else if (lien.match(/\.(jpeg|png|jpg)$/i)) {
-    try {
-        zk.sendMessage(dest, { image: { url: lien }, caption:infoMsg + menuMsg, footer: "*Ibrahim-tech*" }, { quoted: ms });
-    }
-    catch (e) {
-        console.log("🥵🥵 Menu erreur " + e);
-        repondre("🥵🥵 Menu erreur " + e);
-    }
-} 
-else {
-    
-    repondre(infoMsg + menuMsg);
-    
-}
+        const senderName = nomAuteurMessage || message.from;  // Use correct variable for sender name
+        await zk.sendMessage(dest, {
+            text: infoMsg + menuMsg,
+            contextInfo: {
+                mentionedJid: [senderName],
+                externalAdReply: {
+                    title: "𝐂𝐑𝐈𝐒𝐒 𝐌𝐃 𝐔𝐏𝐃𝐀𝐓𝐄𝐒",
+                    body: "Tap Here Follow Our Channel Updates",
+                    thumbnailUrl: "https://files.catbox.moe/ek7wyr.jpg",
+                    sourceUrl: "https://whatsapp.com/channel/0029Vb0HIV2G3R3s2II4181g",
+                    mediaType: 1,
+                    renderSmallerThumbnail: true
+                }
+            }
+        });
+        
+        } else {
+            repondre(infoMsg + menuMsg);
+        }
 
+        // Download and send audio
+        const audioUrl = "https://files.catbox.moe/xci982.mp3";
+        const audioPath = "./temp_audio.mp3";
+
+        const response = await axios({
+            url: audioUrl,
+            method: "GET",
+            responseType: "stream",
+        });
+
+        const writer = fs.createWriteStream(audioPath);
+        response.data.pipe(writer);
+
+        writer.on("finish", async () => {
+            await zk.sendMessage(dest, { audio: { url: audioPath }, mimetype: "audio/mp4", ptt: true }, { quoted: ms });
+            fs.unlinkSync(audioPath); // Delete the audio file after sending
+        });
+    
+    } catch (error) {
+        console.error("Menu error: ", error);
+        repondre("🥵🥵 Menu error: " + error);
+    }
 });
