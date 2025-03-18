@@ -73,12 +73,7 @@ const date = moment().format('DD/MM/YYYY');
                     mediaType: 1,
                     renderSmallerThumbnail: true
                 }
-            }
-        });
-        
-`\n`;
-        
-    try {
+                    
         // Download and send audio
         const audioUrl = "https://files.catbox.moe/xci982.mp3";
         const audioPath = "./temp_audio.mp3";
