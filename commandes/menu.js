@@ -73,7 +73,18 @@ const date = moment().format('DD/MM/YYYY');
                     mediaType: 1,
                     renderSmallerThumbnail: true
                 }
+            }
+        }});
                     
+    try {
+        if (imageUrl.match(/\.(mp4|gif)$/i)) {
+            await zk.sendMessage(dest, { video: { url: imageUrl }, caption: infoMsg + menuMsg, gifPlayback: true }, { quoted: ms });
+        } else if (imageUrl.match(/\.(jpeg|png|jpg)$/i)) {
+            await zk.sendMessage(dest, { image: { url: imageUrl }, caption: infoMsg + menuMsg }, { quoted: ms });
+        } else {
+            repondre(infoMsg + menuMsg);
+        }
+
         // Download and send audio
         const audioUrl = "https://files.catbox.moe/xci982.mp3";
         const audioPath = "./temp_audio.mp3";
