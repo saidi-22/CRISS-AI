@@ -7,7 +7,7 @@ zokou({
   nomCom: "fullpp",
   aliases: ["updatepp", "ppfull"],
   reaction: '⚔️',
-  categorie: "search"
+  categorie: "Search"
 }, async (dest, zk, commandeOptions) => {
   const { repondre, msgRepondu, auteurMessage } = commandeOptions;
 
