@@ -60,7 +60,7 @@ const date = moment().format('DD/MM/YYYY');
 𝐏𝐎𝐖𝐄𝐑𝐄𝐃 𝐁𝐘 𝐂𝐑𝐈𝐒𝐒 𝐕𝐄𝐕𝐎\n`;
 
     try {
-        const senderName = nomAuteurMessage || message.from;  // Use correct variable for sender name
+       if (const senderName = nomAuteurMessage || message.from;  // Use correct variable for sender name
         await zk.sendMessage(dest, {
             text: infoMsg + menuMsg,
             contextInfo: {
@@ -75,15 +75,8 @@ const date = moment().format('DD/MM/YYYY');
                 }
             }
         }});
-                    
-    try {
-        if (imageUrl.match(/\.(mp4|gif)$/i)) {
-            await zk.sendMessage(dest, { video: { url: imageUrl }, caption: infoMsg + menuMsg, gifPlayback: true }, { quoted: ms });
-        } else if (imageUrl.match(/\.(jpeg|png|jpg)$/i)) {
-            await zk.sendMessage(dest, { image: { url: imageUrl }, caption: infoMsg + menuMsg }, { quoted: ms });
-        } else {
-            repondre(infoMsg + menuMsg);
-        }
+        
+      }
 
         // Download and send audio
         const audioUrl = "https://files.catbox.moe/xci982.mp3";
