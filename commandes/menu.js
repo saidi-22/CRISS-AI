@@ -60,24 +60,23 @@ const date = moment().format('DD/MM/YYYY');
 𝐏𝐎𝐖𝐄𝐑𝐄𝐃 𝐁𝐘 𝐂𝐑𝐈𝐒𝐒 𝐕𝐄𝐕𝐎\n`;
 
     try {
-       if (const senderName = nomAuteurMessage || message.from;  // Use correct variable for sender name
+        const senderName = nomAuteurMessage || message.from;  // Use correct variable for sender name
         await zk.sendMessage(dest, {
             text: infoMsg + menuMsg,
             contextInfo: {
                 mentionedJid: [senderName],
                 externalAdReply: {
                     title: "𝐂𝐑𝐈𝐒𝐒 𝐌𝐃 𝐔𝐏𝐃𝐀𝐓𝐄𝐒",
-                    body: "Tap Here Follow Our Channel Updates",
+                    body: "Tap here my friend join channel update",
                     thumbnailUrl: "https://files.catbox.moe/ek7wyr.jpg",
                     sourceUrl: "https://whatsapp.com/channel/0029Vb0HIV2G3R3s2II4181g",
                     mediaType: 1,
-                    renderSmallerThumbnail: true
+                    renderLargerThumbnail: true
                 }
             }
-        }});
-        
-    } catch (e) {
-        console.log("🥵🥵 Menu error: " + e);
-        repondre("🥵🥵 Menu error: " + e);
+        });
+    } catch (error) {
+        console.error("Menu error: ", error);
+        repondre("🥵🥵 Menu error: " + error);
     }
 });
