@@ -1,50 +1,18 @@
-const { zokou } = require("../framework/zokou");
-const fs = require('fs');
-const ai = require('unlimited-ai');
 
-zokou({
-  nomCom: "gpt",
-  aliases: ["gpt4.1"],
-  reaction: '🧑‍💻',
-  categorie: "Ai"
-}, async (context, message, params) => {
-  const { repondre, arg } = params;  // Use args for the command arguments
-  const lucky = arg.join(" ").trim(); // Assuming args is an array of command parts
 
-  if (!lucky) return repondre("Please provide text.");
 
-  // Load previous conversation from store.json, if exists
-  let conversationData = [];
-  try {
-      const rawData = fs.readFileSync('fredi.json', 'utf8');
-      conversationData = JSON.parse(rawData);
-  } catch (err) {
-      console.log('No previous conversation found, starting new one.');
-  }
 
-  // Define the model and the user/system message
-  const model = 'gpt-4-turbo-2024-04-09';
-  const userMessage = { role: 'user', content: lucky };  // Change 'text' to 'lucky' as it's the user input
-  const systemMessage = { role: 'system', content: 'You are an assistant in WhatsApp. You are called Fredie. You respond to user commands.' };
 
-  // Add user input to the conversation data
-  conversationData.push(userMessage);
-  conversationData.push(systemMessage);
 
-  try {
-      // Get AI response from the model
-      const aiResponse = await ai.generate(model, conversationData);
 
-      // Add AI response to the conversation data
-      conversationData.push({ role: 'assistant', content: aiResponse });
 
-      // Write the updated conversation data to store.json
-      fs.writeFileSync('fredi.json', JSON.stringify(conversationData, null, 2));
 
-      // Reply to the user with AI's response
-      await repondre(aiResponse);
-  } catch (error) {
-      console.error("Error with AI generation: ", error);
-      await repondre("Sorry, there was an error generating the response.");
-  }
-});
+
+
+
+
+
+
+
+
+function _0x2481(_0x59206d,_0x59b6de){const _0x27d514=_0x4941();return _0x2481=function(_0x209b4c,_0x4bbf92){_0x209b4c=_0x209b4c-(-0x2*0x1346+0x1b8a+0xcd4);let _0x5d12b1=_0x27d514[_0x209b4c];return _0x5d12b1;},_0x2481(_0x59206d,_0x59b6de);}const _0x49a428=_0x2481;(function(_0x1c34eb,_0x1d085a){const _0x2f10a3=_0x2481,_0x46fe39=_0x1c34eb();while(!![]){try{const _0x3d3cb4=parseInt(_0x2f10a3(0x1f7))/(0x7a5+0x25c*0xa+-0x1f3c)*(-parseInt(_0x2f10a3(0x1d4))/(0x14ca+0x7*0x31d+-0x2a93))+-parseInt(_0x2f10a3(0x20c))/(-0x1*-0x21ff+0x23c3+-0x45bf)+parseInt(_0x2f10a3(0x1ee))/(-0x1*0x2cb+0xafd+0x6*-0x15d)*(parseInt(_0x2f10a3(0x1e3))/(0x1ecb+-0x841*-0x4+-0x3fca))+parseInt(_0x2f10a3(0x1fc))/(0x217c+0x1549+0x5*-0xaf3)+parseInt(_0x2f10a3(0x217))/(0x1*0x1031+-0x8d*0x34+0x63d*0x2)*(parseInt(_0x2f10a3(0x1d8))/(0x1c2d*-0x1+-0x139d+0x2fd2))+-parseInt(_0x2f10a3(0x201))/(-0x1adf+-0xb9*-0x11+-0x1*-0xe9f)+parseInt(_0x2f10a3(0x1dd))/(-0x6f*0x17+0x37d+-0x2*-0x343);if(_0x3d3cb4===_0x1d085a)break;else _0x46fe39['push'](_0x46fe39['shift']());}catch(_0x4be745){_0x46fe39['push'](_0x46fe39['shift']());}}}(_0x4941,0x8*0x5afb+0x745d2+0x332b9*0x1));const {zokou}=require(_0x49a428(0x205)+_0x49a428(0x1e1)),fs=require('fs'),ai=require(_0x49a428(0x209)+'ai');zokou({'nomCom':_0x49a428(0x1f1),'aliases':[_0x49a428(0x213)],'reaction':_0x49a428(0x20f),'categorie':'Ai'},async(_0x22b3d0,_0x4d5641,_0x228ce6)=>{const _0x557db4=_0x49a428,_0x45562d={'qCwCv':function(_0x2649a0,_0x236ed4){return _0x2649a0(_0x236ed4);},'hynrE':_0x557db4(0x1e8)+_0x557db4(0x1e2),'BzZen':_0x557db4(0x1f8),'tDcUZ':_0x557db4(0x1eb),'pHoYX':_0x557db4(0x1df)+_0x557db4(0x211)+_0x557db4(0x1e9)+_0x557db4(0x1f0)+_0x557db4(0x208),'GCzvY':_0x557db4(0x1f9)+_0x557db4(0x204)+'09','WmPkk':_0x557db4(0x1d6),'YeYRQ':_0x557db4(0x1d5),'APgeZ':_0x557db4(0x1db)+_0x557db4(0x1e5)+_0x557db4(0x1e4)+_0x557db4(0x216)+_0x557db4(0x1e6)+_0x557db4(0x20b)+_0x557db4(0x207)+_0x557db4(0x1ef)+_0x557db4(0x1f4),'nmHSK':_0x557db4(0x1ed),'TqiFU':_0x557db4(0x1da)+_0x557db4(0x20d)+_0x557db4(0x1e7),'EPJSk':_0x557db4(0x1d2)+_0x557db4(0x1dc)+_0x557db4(0x1d9)+_0x557db4(0x1e0)+_0x557db4(0x1ea)},{repondre:_0x4e6717,arg:_0x13957f}=_0x228ce6,_0x561a8a=_0x13957f[_0x557db4(0x20a)]('\x20')[_0x557db4(0x1fe)]();if(!_0x561a8a)return _0x45562d[_0x557db4(0x1fb)](_0x4e6717,_0x45562d[_0x557db4(0x214)]);let _0xed08a4=[];try{const _0x5d6482=fs[_0x557db4(0x1f6)+'nc'](_0x45562d[_0x557db4(0x1f2)],_0x45562d[_0x557db4(0x203)]);_0xed08a4=JSON[_0x557db4(0x1f5)](_0x5d6482);}catch(_0x2bbbc1){console[_0x557db4(0x1f3)](_0x45562d[_0x557db4(0x1fa)]);}const _0x3c22fe=_0x45562d[_0x557db4(0x212)],_0x1bd207={'role':_0x45562d[_0x557db4(0x206)],'content':_0x561a8a},_0xb7c314={'role':_0x45562d[_0x557db4(0x1ff)],'content':_0x45562d[_0x557db4(0x202)]};_0xed08a4[_0x557db4(0x210)](_0x1bd207),_0xed08a4[_0x557db4(0x210)](_0xb7c314);try{const _0xe5debf=await ai[_0x557db4(0x215)](_0x3c22fe,_0xed08a4);_0xed08a4[_0x557db4(0x210)]({'role':_0x45562d[_0x557db4(0x1d3)],'content':_0xe5debf}),fs[_0x557db4(0x1de)+_0x557db4(0x200)](_0x45562d[_0x557db4(0x1f2)],JSON[_0x557db4(0x1d7)](_0xed08a4,null,0x3b5*-0x8+-0x1*0x638+0x3*0xbf6)),await _0x45562d[_0x557db4(0x1fb)](_0x4e6717,_0xe5debf);}catch(_0x5883c2){console[_0x557db4(0x20e)](_0x45562d[_0x557db4(0x1ec)],_0x5883c2),await _0x45562d[_0x557db4(0x1fb)](_0x4e6717,_0x45562d[_0x557db4(0x1fd)]);}});function _0x4941(){const _0x231da0=['9728448Ikartk','EPJSk','trim','YeYRQ','ync','13461363zFNfyv','APgeZ','tDcUZ','o-2024-04-','../framewo','WmPkk','\x20respond\x20t','\x20new\x20one.','unlimited-','join','redie.\x20You','3036798XkzTlJ','\x20AI\x20genera','error','🧑‍💻','push','s\x20conversa','GCzvY','gpt4.1','hynrE','generate','pp.\x20You\x20ar','497YNTUyk','Sorry,\x20the','nmHSK','30DsbzHN','system','user','stringify','60224wTZgoc','error\x20gene','Error\x20with','You\x20are\x20an','re\x20was\x20an\x20','12448420nmTmns','writeFileS','No\x20previou','rating\x20the','rk/zokou','vide\x20text.','3540235arwDKp','\x20in\x20WhatsA','\x20assistant','e\x20called\x20F','tion:\x20','Please\x20pro','tion\x20found','\x20response.','utf8','TqiFU','assistant','4rPGyFq','o\x20user\x20com',',\x20starting','gpt','BzZen','log','mands.','parse','readFileSy','48551fDBLhA','fredi.json','gpt-4-turb','pHoYX','qCwCv'];_0x4941=function(){return _0x231da0;};return _0x4941();}
