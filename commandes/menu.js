@@ -8,7 +8,7 @@ const s = require(__dirname + "/../set");
 const more = String.fromCharCode(8206)
 const readmore = more.repeat(4001)
 
-zokou({ nomCom: "menu2", categorie: "General" }, async (dest, zk, commandeOptions) => {
+zokou({ nomCom: "menu", categorie: "General" }, async (dest, zk, commandeOptions) => {
     let { ms, repondre ,prefixe,nomAuteurMessage,mybotpic} = commandeOptions;
     let { cm } = require(__dirname + "/../framework//zokou");
     var coms = {};
@@ -34,11 +34,11 @@ const date = moment().format('DD/MM/YYYY');
 
   let infoMsg =  `
 ╭──────────────────◆
-┃◆ ╭───*◆𝐂𝐑𝐈𝐒𝐒 𝐌𝐃◆──────◆*
+┃◆ ╭───◆𝐂𝐑𝐈𝐒𝐒 𝐌𝐃◆───────◆
 ┃◎  │ *User* : ${s.OWNER_NAME}
 ┃◎  │ *Mode* : ${mode}
 ┃◎ ╰────────────────◆
-┃◎  │ *Time* : ${temps}  
+┃◎  │ *Time* : ${temps}
 ┃◎  │ *Ram* : ${format(os.totalmem() - os.freemem())}/${format(os.totalmem())}
 ┃◆ ╰────────────────◆
 ╰──────────────────◆ \n\n`;
