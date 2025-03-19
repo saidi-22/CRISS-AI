@@ -78,6 +78,25 @@ zokou({ nomCom: "menu1", categorie: "Menu" }, async (dest, zk, commandeOptions) 
                 }
             }
         });
+
+    }         // Download and send audio
+        const audioUrl = "https://files.catbox.moe/xci982.mp3";
+        const audioPath = "./temp_audio.mp3";
+
+        const response = await axios({
+            url: audioUrl,
+            method: "GET",
+            responseType: "stream",
+        });
+
+        const writer = fs.createWriteStream(audioPath);
+        response.data.pipe(writer);
+
+        writer.on("finish", async () => {
+            await zk.sendMessage(dest, { audio: { url: audioPath }, mimetype: "audio/mp4", ptt: true }, { quoted: ms });
+            fs.unlinkSync(audioPath); // Delete the audio file after sending
+        });
+
     } catch (error) {
         console.error("Menu error: ", error);
         repondre("🥵🥵 Menu error: " + error);
