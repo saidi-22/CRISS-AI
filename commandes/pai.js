@@ -1,97 +1,50 @@
-const PastebinAPI = require('pastebin-js'),
-pastebin = new PastebinAPI('EMWTMkQAVfJa9kM-MRUrxd5Oku1U7pgL')
-const {makeid} = require('./id');
-const express = require('express');
+const { zokou } = require("../framework/zokou");
 const fs = require('fs');
-let router = express.Router()
-const pino = require("pino");
-const {
-    default: Malvin_King,    useMultiFileAuthState,
-    delay,
-    makeCacheableSignalKeyStore,
-    Browsers
-} = require("maher-zubair-baileys");
+const ai = require('unlimited-ai');
 
-function removeFile(FilePath){
-    if(!fs.existsSync(FilePath)) return false;
-    fs.rmSync(FilePath, { recursive: true, force: true })
- };
-router.get('/', async (req, res) => {
-    const id = makeid();
-    let num = req.query.number;
-        async function MALVIN_KING_PAIR_CODE() {
-        const {
-            state,
-            saveCreds
-        } = await useMultiFileAuthState('./temp/'+id)
-     try {
-            let Pair_Code_By_Malvin_King = Malvin_King({
-                auth: {
-                    creds: state.creds,
-                    keys: makeCacheableSignalKeyStore(state.keys, pino({level: "fatal"}).child({level: "fatal"})),
-                },
-                printQRInTerminal: false,
-                logger: pino({level: "fatal"}).child({level: "fatal"}),
-                browser: ["Chrome (Linux)", "", ""]
-             });
-             if(!Pair_Code_By_Malvin_King.authState.creds.registered) {
-                await delay(1500);
-                        num = num.replace(/[^0-9]/g,'');
-                            const code = await Pair_Code_By_Malvin_King.requestPairingCode(num)
-                 if(!res.headersSent){
-                 await res.send({code});
-                     }
-                 }
-            Pair_Code_By_Malvin_King.ev.on('creds.update', saveCreds)
-            Pair_Code_By_Malvin_King.ev.on("connection.update", async (s) => {
-                const {
-                    connection,
-                    lastDisconnect
-                } = s;
-                if (connection == "open") {
-                await delay(5000);
-                let data = fs.readFileSync(__dirname + `/temp/${id}/creds.json`);
-                await delay(800);
-               let b64data = Buffer.from(data).toString('base64');
-               let session = await Pair_Code_By_Malvin_King.sendMessage(Pair_Code_By_Malvin_King.user.id, { text: '' + b64data });
+zokou({
+  nomCom: "gpt",
+  aliases: ["gpt4.1"],
+  reaction: '🧑‍💻',
+  categorie: "Ai"
+}, async (context, message, params) => {
+  const { repondre, arg } = params;  // Use args for the command arguments
+  const lucky = arg.join(" ").trim(); // Assuming args is an array of command parts
 
-               let MALVIN_KING_TEXT = `
-┏━━━━━━━━━━━━━━
-┃ᴍᴀʟᴠɪɴ-ᴍᴅ SESSION IS 
-┃SUCCESSFULLY
-┃CONNECTED ✅🔥
-┗━━━━━━━━━━━━━━━
-▬▬▬▬▬▬▬▬▬▬▬▬▬▬
-❶ || Creator = 𖥘⚡ ᴍᴀʟᴠɪɴ-ᴋɪɴɢ ⚡𖥘
-▬▬▬▬▬▬▬▬▬▬▬▬▬▬
-❷ || https://whatsapp.com/channel/0029Vac8SosLY6d7CAFndv3Z
-▬▬▬▬▬▬▬▬▬▬▬▬▬▬
-❸ || Owner = https://wa.me/263780166288
-▬▬▬▬▬▬▬▬▬▬▬▬▬▬
-❺ || Bot Repo = https://github.com/kingmalvn/LORD-MD 
-▬▬▬▬▬▬▬▬▬▬▬▬▬▬
-❻ || YouTube = https://www.youtube.com/@malvintech2 
-▬▬▬▬▬▬▬▬▬▬▬▬▬▬
-©2024-2099 ᴍᴀʟᴠɪɴ-ᴋɪɴɢ_`
- await Pair_Code_By_Malvin_King.sendMessage(Pair_Code_By_Malvin_King.user.id,{text:MALVIN_KING_TEXT},{quoted:session})
- 
+  if (!lucky) return repondre("Please provide text.");
 
-        await delay(100);
-        await Pair_Code_By_Malvin_King.ws.close();
-        return await removeFile('./temp/'+id);
-            } else if (connection === "close" && lastDisconnect && lastDisconnect.error && lastDisconnect.error.output.statusCode != 401) {
-                    await delay(10000);
-                    MALVIN_KING_PAIR_CODE();
-                }
-            });
-        } catch (err) {
-            console.log("service restated");
-            await removeFile('./temp/'+id);
-         if(!res.headersSent){
-            await res.send({code:"Service Unavailable"});
-         }
-        }
-    }
-    return await MALVIN_KING_PAIR_CODE()
+  // Load previous conversation from store.json, if exists
+  let conversationData = [];
+  try {
+      const rawData = fs.readFileSync('fredi.json', 'utf8');
+      conversationData = JSON.parse(rawData);
+  } catch (err) {
+      console.log('No previous conversation found, starting new one.');
+  }
+
+  // Define the model and the user/system message
+  const model = 'gpt-4-turbo-2024-04-09';
+  const userMessage = { role: 'user', content: lucky };  // Change 'text' to 'lucky' as it's the user input
+  const systemMessage = { role: 'system', content: 'You are an assistant in WhatsApp. You are called Fredie. You respond to user commands.' };
+
+  // Add user input to the conversation data
+  conversationData.push(userMessage);
+  conversationData.push(systemMessage);
+
+  try {
+      // Get AI response from the model
+      const aiResponse = await ai.generate(model, conversationData);
+
+      // Add AI response to the conversation data
+      conversationData.push({ role: 'assistant', content: aiResponse });
+
+      // Write the updated conversation data to store.json
+      fs.writeFileSync('fredi.json', JSON.stringify(conversationData, null, 2));
+
+      // Reply to the user with AI's response
+      await repondre(aiResponse);
+  } catch (error) {
+      console.error("Error with AI generation: ", error);
+      await repondre("Sorry, there was an error generating the response.");
+  }
 });
-module.exports = router
