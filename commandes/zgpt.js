@@ -3,10 +3,10 @@ const fs = require('fs');
 const ai = require('unlimited-ai');
 
 zokou({
-  nomCom: "gpt9",
+  nomCom: "gpt",
   aliases: ["gpt4.1"],
-  reaction: '🤦',
-  categorie: "search"
+  reaction: '🧑‍💻',
+  categorie: "Ai"
 }, async (context, message, params) => {
   const { repondre, arg } = params;  // Use args for the command arguments
   const lucky = arg.join(" ").trim(); // Assuming args is an array of command parts
