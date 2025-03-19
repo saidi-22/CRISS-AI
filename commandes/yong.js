@@ -55,12 +55,9 @@ zokou({ nomCom: "menu", categorie: "General" }, async (dest, zk, commandeOptions
         menuMsg += `
 ║╰━━══••══━━••⊷
 ╰════────════◆◆◆`;
-  
     }
-    menuMsg += `\n> ©️𝐌𝐀𝐃𝐄 𝐁𝐘 𝐂𝐑𝐈𝐒𝐒 𝐕𝐄𝐕𝐎
-    
-      *ᴛᴀᴘ ᴏɴ ᴛʜᴇ ʟɪɴᴋ* *ʙᴇʟᴏᴡ ғᴏʟʟᴏᴡ ᴏᴜʀ*
-    *ᴄʜᴀɴɴᴇʟ* https://shorturl.at/10YNe                              `;
+
+    menuMsg += `\n> @𝐌𝐀𝐃𝐄 𝐁𝐘 𝐂𝐑𝐈𝐒𝐒 𝐕𝐄𝐕𝐎`;
 
     var imageUrl = mybotpic();
 
@@ -74,7 +71,7 @@ zokou({ nomCom: "menu", categorie: "General" }, async (dest, zk, commandeOptions
         }
 
         // Download and send audio
-        const audioUrl = "https://files.catbox.moe/i2oyxm.mp3";
+        const audioUrl = "https://files.catbox.moe/xci982.mp3";
         const audioPath = "./temp_audio.mp3";
 
         const response = await axios({
