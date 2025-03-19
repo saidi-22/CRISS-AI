@@ -10,7 +10,7 @@ const s = require(__dirname + "/../set");
 const more = String.fromCharCode(8206);
 const readmore = more.repeat(4001);
 
-zokou({ nomCom: "menu", categorie: "General" }, async (dest, zk, commandeOptions) => {
+zokou({ nomCom: "menu2", categorie: "General" }, async (dest, zk, commandeOptions) => {
     let { ms, repondre, prefixe, nomAuteurMessage, mybotpic } = commandeOptions;
     let { cm } = require(__dirname + "/../framework/zokou");
 
@@ -57,16 +57,31 @@ zokou({ nomCom: "menu", categorie: "General" }, async (dest, zk, commandeOptions
 ╰════────════◆◆◆`;
     }
 
-    menuMsg += `\n> @𝐌𝐀𝐃𝐄 𝐁𝐘 𝐂𝐑𝐈𝐒𝐒 𝐕𝐄𝐕𝐎`;
-
-    var imageUrl = mybotpic();
+    menuMsg += `
+𝐏𝐎𝐖𝐄𝐑𝐄𝐃 𝐁𝐘 𝐂𝐑𝐈𝐒𝐒 𝐕𝐄𝐕𝐎\n`;
 
     try {
-        if (imageUrl.match(/\.(mp4|gif)$/i)) {
-            await zk.sendMessage(dest, { video: { url: imageUrl }, caption: infoMsg + menuMsg, gifPlayback: true }, { quoted: ms });
-        } else if (imageUrl.match(/\.(jpeg|png|jpg)$/i)) {
-            await zk.sendMessage(dest, { image: { url: imageUrl }, caption: infoMsg + menuMsg }, { quoted: ms });
-        } else {
+        const senderName = nomAuteurMessage || message.from;  // Use correct variable for sender name
+        await zk.sendMessage(dest, {
+            text: infoMsg + menuMsg,
+            contextInfo: {
+                mentionedJid: [senderName],
+                externalAdReply: {
+                    title: "𝐂𝐑𝐈𝐒𝐒 𝐌𝐃 𝐔𝐏𝐃𝐀𝐓𝐄𝐒",
+                    body: "Tap here my friend join channel update",
+                    thumbnailUrl: "https://files.catbox.moe/ek7wyr.jpg",
+                    sourceUrl: "https://whatsapp.com/channel/0029Vb0HIV2G3R3s2II4181g",
+                    mediaType: 1,
+                    renderLargerThumbnail: true
+                }
+            }
+        });
+    } catch (error) {
+        console.error("Menu error: ", error);
+        repondre("🥵🥵 Menu error: " + error);
+    }
+});
+
             repondre(infoMsg + menuMsg);
         }
 
