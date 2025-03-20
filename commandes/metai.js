@@ -63,7 +63,7 @@ zokou({
 });
 
 zokou({
-  nomCom: "yomama😂",
+  nomCom: "yomama",
   reaction: '😁',
   categorie: "FUN"
 }, async (client, user, options) => {
