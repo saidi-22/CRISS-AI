@@ -8,7 +8,7 @@ const s = require(__dirname + "/../set");
 const more = String.fromCharCode(8206)
 const readmore = more.repeat(4001)
 
-zokou({ nomCom: "menu", categorie: "General" }, async (dest, zk, commandeOptions) => {
+zokou({ nomCom: "alive4", categorie: "General" }, async (dest, zk, commandeOptions) => {
     let { ms, repondre ,prefixe,nomAuteurMessage,mybotpic} = commandeOptions;
     let { cm } = require(__dirname + "/../framework//zokou");
     var coms = {};
@@ -33,31 +33,12 @@ const temps = moment().format('HH:mm:ss');
 const date = moment().format('DD/MM/YYYY');
 
   let infoMsg =  `
-╭──────────────────◆
-┃◆ ╭───◆𝐂𝐑𝐈𝐒𝐒 𝐌𝐃◆───────◆
-┃◎  │ *User* : ${s.OWNER_NAME}
-┃◎  │ *Mode* : ${mode}
-┃◎ ╰────────────────◆
-┃◎  │ *Time* : ${temps}
-┃◎  │ *Ram* : ${format(os.totalmem() - os.freemem())}/${format(os.totalmem())}
-┃◆ ╰────────────────◆
-╰──────────────────◆ \n\n`;
+𝐇𝐈 👋 \n\n`;
     let menuMsg=`  
-  *𝐂𝐑𝐈𝐒𝐒 𝐌𝐃 𝐂𝐎𝐌𝐌𝐀𝐍𝐃𝐒*
+  *𝐓𝐇𝐈𝐒‘𝐒 𝐂𝐑𝐈𝐒𝐒 𝐌𝐃 𝐁𝐎𝐓*
 `;
-
-    for (const cat in coms) {
-        menuMsg += `*╭━━━◆${cat}◆⁠━━*`;
-        for (const cmd of coms[cat]) {
-            menuMsg += `  
-*┃◆* ${cmd}`;
-        }
-        menuMsg += `
-*╰════────════◆◆◆* \n`
-    }
-
     menuMsg += `
-𝐏𝐎𝐖𝐄𝐑𝐄𝐃 𝐁𝐘 𝐂𝐑𝐈𝐒𝐒 𝐕𝐄𝐕𝐎\n`;
+𝐈𝐒 𝐀𝐋𝐈𝐕𝐄 𝐀𝐋𝐋 𝐓𝐇𝐄 𝐓𝐈𝐌𝐄\n`;
 
     try {
         const senderName = nomAuteurMessage || message.from;  // Use correct variable for sender name
