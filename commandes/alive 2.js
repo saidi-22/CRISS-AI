@@ -78,7 +78,7 @@ else {
             try {
         const senderName = nomAuteurMessage || message.from;  // Use correct variable for sender name
         await zk.sendMessage(dest, {
-            text: infoMsg + menuMsg,
+            text: infoMsg + aliveMsg,
             contextInfo: {
                 mentionedJid: [senderName],
                 externalAdReply: {
