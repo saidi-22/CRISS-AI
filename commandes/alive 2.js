@@ -5,7 +5,7 @@ const s = require(__dirname + "/../set");
 
 zokou(
     {
-        nomCom : 'alive',
+        nomCom : 'alive1',
         categorie : 'General'
         
     },async (dest,zk,commandeOptions) => {
@@ -73,7 +73,30 @@ else {
     } else {
         if(!superUser) { repondre("CRISS VMD BOT IS ALiVE ALL THE TIME👨‍💻") ; return};
 
-      await   repondre("CRISS VMD BOT IS ALiVE ALL THE TIME👨‍💻");
+      await   repondre("CRISS VMD BOT IS ALiVE ALL THE TIME👨‍💻"); /n
+
+            try {
+        const senderName = nomAuteurMessage || message.from;  // Use correct variable for sender name
+        await zk.sendMessage(dest, {
+            text: infoMsg + menuMsg,
+            contextInfo: {
+                mentionedJid: [senderName],
+                externalAdReply: {
+                    title: "𝐂𝐑𝐈𝐒𝐒 𝐌𝐃 𝐔𝐏𝐃𝐀𝐓𝐄𝐒",
+                    body: "Tap here my friend join channel update",
+                    thumbnailUrl: "https://files.catbox.moe/ek7wyr.jpg",
+                    sourceUrl: "https://whatsapp.com/channel/0029Vb0HIV2G3R3s2II4181g",
+                    mediaType: 1,
+                    renderLargerThumbnail: true
+                }
+            }
+        });
+    } catch (error) {
+        console.error("Menu error: ", error);
+        repondre("🥵🥵 Menu error: " + error);
+    }
+});
+
      }
  } else {
 
