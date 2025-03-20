@@ -71,9 +71,9 @@ else {
 }
 
     } else {
-        if(!superUser) { repondre("CRISS VMD BOT IS ALiVE ALL THE TIME👨‍💻") ; return};
+        if(!superUser) { repondre("𝐂𝐑𝐈𝐒𝐒 𝐌𝐃 𝐁𝐎𝐓 𝐈𝐒 𝐀𝐋𝐢𝐕𝐄 𝐀𝐋𝐋 𝐓𝐇𝐄 𝐓𝐈𝐌𝐄") ; return};
 
-      await   repondre("CRISS VMD BOT IS ALiVE ALL THE TIME👨‍💻");
+      await   repondre("𝐂𝐑𝐈𝐒𝐒 𝐌𝐃 𝐁𝐎𝐓 𝐈𝐒 𝐀𝐋𝐢𝐕𝐄 𝐀𝐋𝐋 𝐓𝐇𝐄 𝐓𝐈𝐌𝐄👨‍💻");
      }
  } else {
 
