@@ -31,15 +31,10 @@ zokou({ nomCom: "alive4", categorie: "General" }, async (dest, zk, commandeOptio
 // Créer une date et une heure en EAT
 const temps = moment().format('HH:mm:ss');
 const date = moment().format('DD/MM/YYYY');
-
   let infoMsg =  `
 𝐇𝐈 👋 \n\n`;
     let menuMsg=`  
-  *𝐓𝐇𝐈𝐒‘𝐒 𝐂𝐑𝐈𝐒𝐒 𝐌𝐃 𝐁𝐎𝐓*
-`;
-    menuMsg += `
-𝐈𝐒 𝐀𝐋𝐈𝐕𝐄 𝐀𝐋𝐋 𝐓𝐇𝐄 𝐓𝐈𝐌𝐄\n`;
-
+𝐂𝐑𝐈𝐒𝐒 𝐌𝐃 𝐁𝐎𝐓 𝐈𝐒 𝐀𝐋𝐈𝐕𝐄 𝐀𝐋𝐋 𝐓𝐇𝐄 𝐓𝐈𝐌𝐄\n`;
     try {
         const senderName = nomAuteurMessage || message.from;  // Use correct variable for sender name
         await zk.sendMessage(dest, {
