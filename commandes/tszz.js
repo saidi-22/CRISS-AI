@@ -9,7 +9,7 @@ const s = require(__dirname + "/../set");
 const more = String.fromCharCode(8206)
 const readmore = more.repeat(4001)
 
-zokou({ nomCom: "pair", categorie: "General" }, async (dest, zk, commandeOptions) => {
+zokou({ nomCom: "gp", categorie: "General" }, async (dest, zk, commandeOptions) => {
     let { ms, repondre ,prefixe,nomAuteurMessage,mybotpic} = commandeOptions;
     let { cm } = require(__dirname + "/../framework//zokou");
     var coms = {};
@@ -36,8 +36,8 @@ const date = moment().format('DD/MM/YYYY');
 
   let infoMsg =  `
 ╭───────────────━⊷
-┊ *PAIRING CODE*
-┊ https://criss-md-3.onrender.com/pair
+┊ *JOIN OUR TESTING GROUP*
+┊ https://shorturl.at/pJJEJ
 ╰───────────────━⊷
  `;    
 let menuMsg = `
