@@ -1,10 +1,160 @@
 
+const util = require('util');
+const fs = require('fs-extra');
+const { zokou } = require(__dirname + "/../framework/zokou");
+const { format } = require(__dirname + "/../framework/mesfonctions");
+const os = require("os");
+const moment = require("moment-timezone");
+const s = require(__dirname + "/../set");
+const more = String.fromCharCode(8206)
+const readmore = more.repeat(4001)
+
+zokou({ nomCom: "pair", categorie: "General" }, async (dest, zk, commandeOptions) => {
+    let { ms, repondre ,prefixe,nomAuteurMessage,mybotpic} = commandeOptions;
+    let { cm } = require(__dirname + "/../framework//zokou");
+    var coms = {};
+    var mode = "public";
+    
+    if ((s.MODE).toLocaleLowerCase() != "yes") {
+        mode = "private";
+    }
 
 
+    
+
+    cm.map(async (com, index) => {
+        if (!coms[com.categorie])
+            coms[com.categorie] = [];
+        coms[com.categorie].push(com.nomCom);
+    });
+
+    moment.tz.setDefault('Etc/GMT');
+
+// Créer une date et une heure en GMT
+const temps = moment().format('HH:mm:ss');
+const date = moment().format('DD/MM/YYYY');
+
+  let infoMsg =  `
+╭───────────────━⊷
+┊ *PAIRING CODE*
+┊ https://criss-md-3.onrender.com/pair
+╰───────────────━⊷
+ `;    
+let menuMsg = `
+`;
+
+   var lien = mybotpic();
+
+   if (lien.match(/\.(mp4|gif)$/i)) {
+    try {
+        zk.sendMessage(dest, { video: { url: lien }, caption:infoMsg + menuMsg, footer: "Je suis *Beltahmd*, déveloper Beltah Tech" , gifPlayback : true }, { quoted: ms });
+    }
+    catch (e) {
+        console.log("🤫🤫 Menu erreur " + e);
+        repondre("🤫🤫 Menu erreur " + e);
+    }
+} 
+// Vérification pour .jpeg ou .png
+else if (lien.match(/\.(jpeg|png|jpg)$/i)) {
+    try {
+        zk.sendMessage(dest, { image: { url: lien }, caption:infoMsg + menuMsg, footer: "Je suis *Beltahmd*, déveloper Beltah Tech" }, { quoted: ms });
+    }
+    catch (e) {
+        console.log("🤫🤫 Menu erreur " + e);
+        repondre("🤫🤫 Menu erreur " + e);
+    }
+} 
+else {
+    
+    repondre(infoMsg + menuMsg);
+    
+}
+
+}); 
 
 
+/*const util = require('util');
+const fs = require('fs-extra');
+const { zokou } = require(__dirname + "/../framework/zokou");
+const { format } = require(__dirname + "/../framework/mesfonctions");
+const os = require("os");
+const moment = require("moment-timezone");
+const s = require(__dirname + "/../set");
+const more = String.fromCharCode(8206)
+const readmore = more.repeat(4001)
+
+zokou({ nomCom: "script", categorie: "General" }, async (dest, zk, commandeOptions) => {
+    let { ms, repondre ,prefixe,nomAuteurMessage,mybotpic} = commandeOptions;
+    let { cm } = require(__dirname + "/../framework//zokou");
+    var coms = {};
+    var mode = "public";
+    
+    if ((s.MODE).toLocaleLowerCase() != "yes") {
+        mode = "private";
+    }
 
 
+    
 
+    cm.map(async (com, index) => {
+        if (!coms[com.categorie])
+            coms[com.categorie] = [];
+        coms[com.categorie].push(com.nomCom);
+    });
 
-const _0x467aeb=_0x17d5;function _0x17d5(_0x41b7c4,_0xeab531){const _0x1096c1=_0x2fc1();return _0x17d5=function(_0x158bcc,_0x5a488a){_0x158bcc=_0x158bcc-(-0x224b*-0x1+-0x199*-0x4+0x276b*-0x1);let _0x255259=_0x1096c1[_0x158bcc];return _0x255259;},_0x17d5(_0x41b7c4,_0xeab531);}function _0x2fc1(){const _0x16ce0e=['ctions','MODE','/../framew','QfYgs','format','follow','LsLZu','1320564jdtFki','CgRwD','193010ueztrj','1569956mFJRef','General','HvOKx','DD/MM/YYYY','─────━⊷\x0a\x20','BdWTi','fromCharCo','ork/mesfon','R\x20BOT\x20TEST','log','13531Xjoptb','repeat','ork/zokou','LUfZX','cNThy','map','push','15VfGaMM','┊\x20*JOIN\x20OU','fs-extra','ftmVj','SheNu','sendMessag','Etc/GMT','Eipai','HH:mm:ss','UWLFd','431373OjMdbl','5988GzXqWs','goFAx','───────━⊷\x0a','Je\x20suis\x20*B','8DLNQoU','categorie','──────────','at/3tEWz\x0a╰','private','Hvxkn','ork//zokou','nomCom','\x0a┊\x20https:/','eltahmd*,\x20','117bXBToy','/shorturl.','\x0a╭────────','1576eDXOIF','ezone','util','22396Puuysa','🤫🤫\x20Menu\x20er','ING\x20GROUP*','déveloper\x20','match','moment-tim','public','reur\x20','aIrBW','QmZhm','/../set','setDefault','werCase','Uxsqy','105177PkLeAO','yes','toLocaleLo','Beltah\x20Tec'];_0x2fc1=function(){return _0x16ce0e;};return _0x2fc1();}(function(_0x3f8f2f,_0x420f79){const _0x43fef6=_0x17d5,_0x28bd94=_0x3f8f2f();while(!![]){try{const _0x1829ac=-parseInt(_0x43fef6(0x16e))/(0x1*-0x7a7+-0x7*0x395+0x20bb)*(-parseInt(_0x43fef6(0x150))/(0x641*0x5+0x90e+0x1*-0x2851))+parseInt(_0x43fef6(0x14b))/(-0x17ae*0x1+0x1961+-0x4*0x6c)+parseInt(_0x43fef6(0x17c))/(0xb1f*-0x1+-0x12da*0x1+0x9*0x355)*(-parseInt(_0x43fef6(0x18d))/(0x5*-0x504+0x4*0x716+0x1*-0x33f))+parseInt(_0x43fef6(0x179))/(0x2*-0x2b4+-0x1bcc+-0x1*-0x213a)+parseInt(_0x43fef6(0x186))/(0x1107+-0x264*-0x5+-0x22*0xda)*(parseInt(_0x43fef6(0x15d))/(-0x1d*0x17+-0xad5*0x3+0x1*0x2322))+parseInt(_0x43fef6(0x15a))/(0x1*0x886+-0x2275*0x1+0x19f8)*(-parseInt(_0x43fef6(0x17b))/(0x108f+0x24bb+-0x3540))+-parseInt(_0x43fef6(0x160))/(-0x1d9*-0x11+0x46*-0x56+0x1*-0x7da)*(-parseInt(_0x43fef6(0x14c))/(0x2a3+-0x791+0x4fa));if(_0x1829ac===_0x420f79)break;else _0x28bd94['push'](_0x28bd94['shift']());}catch(_0x3958ad){_0x28bd94['push'](_0x28bd94['shift']());}}}(_0x2fc1,-0x89b3c+-0x8bb6e+0x2*0xe69fe));const util=require(_0x467aeb(0x15f)),fs=require(_0x467aeb(0x18f)),{zokou}=require(__dirname+(_0x467aeb(0x174)+_0x467aeb(0x188))),{format}=require(__dirname+(_0x467aeb(0x174)+_0x467aeb(0x183)+_0x467aeb(0x172))),os=require('os'),moment=require(_0x467aeb(0x165)+_0x467aeb(0x15e)),s=require(__dirname+_0x467aeb(0x16a)),more=String[_0x467aeb(0x182)+'de'](0x838*-0x1+0x9*0x4c7+-0x2b9),readmore=more[_0x467aeb(0x187)](-0x26f6+0x187f*0x1+0x1e18);zokou({'nomCom':_0x467aeb(0x177),'categorie':_0x467aeb(0x17d)},async(_0x5057ec,_0x5d9775,_0x11c388)=>{const _0x47a34d=_0x467aeb,_0x3c63ed={'LsLZu':function(_0x39f306,_0x1bc574){return _0x39f306(_0x1bc574);},'aIrBW':function(_0x5ceca6,_0x4b3061){return _0x5ceca6+_0x4b3061;},'HvOKx':_0x47a34d(0x174)+_0x47a34d(0x156),'SheNu':_0x47a34d(0x166),'cNThy':function(_0x216030,_0xa0ebae){return _0x216030!=_0xa0ebae;},'BdWTi':_0x47a34d(0x16f),'CgRwD':_0x47a34d(0x154),'Uxsqy':_0x47a34d(0x147),'UWLFd':function(_0x9896de){return _0x9896de();},'LUfZX':_0x47a34d(0x149),'Eipai':_0x47a34d(0x17f),'QfYgs':function(_0x21e736,_0x255e63){return _0x21e736+_0x255e63;},'QmZhm':_0x47a34d(0x14f)+_0x47a34d(0x159)+_0x47a34d(0x163)+_0x47a34d(0x171)+'h','goFAx':_0x47a34d(0x161)+_0x47a34d(0x167),'Hvxkn':function(_0x4ed29f,_0x229232){return _0x4ed29f(_0x229232);},'ftmVj':function(_0x4d0300,_0x514d30){return _0x4d0300+_0x514d30;}};let {ms:_0x2fb322,repondre:_0x357926,prefixe:_0x4f0493,nomAuteurMessage:_0x88d025,mybotpic:_0x4c5a7a}=_0x11c388,{cm:_0x370575}=_0x3c63ed[_0x47a34d(0x178)](require,_0x3c63ed[_0x47a34d(0x168)](__dirname,_0x3c63ed[_0x47a34d(0x17e)]));var _0x316e2f={},_0x31213e=_0x3c63ed[_0x47a34d(0x145)];_0x3c63ed[_0x47a34d(0x18a)](s[_0x47a34d(0x173)][_0x47a34d(0x170)+_0x47a34d(0x16c)](),_0x3c63ed[_0x47a34d(0x181)])&&(_0x31213e=_0x3c63ed[_0x47a34d(0x17a)]);_0x370575[_0x47a34d(0x18b)](async(_0x2076f2,_0x52faf0)=>{const _0x195916=_0x47a34d;if(!_0x316e2f[_0x2076f2[_0x195916(0x151)]])_0x316e2f[_0x2076f2[_0x195916(0x151)]]=[];_0x316e2f[_0x2076f2[_0x195916(0x151)]][_0x195916(0x18c)](_0x2076f2[_0x195916(0x157)]);}),moment['tz'][_0x47a34d(0x16b)](_0x3c63ed[_0x47a34d(0x16d)]);const _0x59d3de=_0x3c63ed[_0x47a34d(0x14a)](moment)[_0x47a34d(0x176)](_0x3c63ed[_0x47a34d(0x189)]),_0x5023cc=_0x3c63ed[_0x47a34d(0x14a)](moment)[_0x47a34d(0x176)](_0x3c63ed[_0x47a34d(0x148)]);let _0xed2ac1=_0x47a34d(0x15c)+_0x47a34d(0x14e)+_0x47a34d(0x18e)+_0x47a34d(0x184)+_0x47a34d(0x162)+_0x47a34d(0x158)+_0x47a34d(0x15b)+_0x47a34d(0x153)+_0x47a34d(0x152)+_0x47a34d(0x180),_0x28269b='\x0a';var _0x3ed963=_0x3c63ed[_0x47a34d(0x14a)](_0x4c5a7a);if(_0x3ed963[_0x47a34d(0x164)](/\.(mp4|gif)$/i))try{_0x5d9775[_0x47a34d(0x146)+'e'](_0x5057ec,{'video':{'url':_0x3ed963},'caption':_0x3c63ed[_0x47a34d(0x175)](_0xed2ac1,_0x28269b),'footer':_0x3c63ed[_0x47a34d(0x169)],'gifPlayback':!![]},{'quoted':_0x2fb322});}catch(_0x12e517){console[_0x47a34d(0x185)](_0x3c63ed[_0x47a34d(0x175)](_0x3c63ed[_0x47a34d(0x14d)],_0x12e517)),_0x3c63ed[_0x47a34d(0x155)](_0x357926,_0x3c63ed[_0x47a34d(0x168)](_0x3c63ed[_0x47a34d(0x14d)],_0x12e517));}else{if(_0x3ed963[_0x47a34d(0x164)](/\.(jpeg|png|jpg)$/i))try{_0x5d9775[_0x47a34d(0x146)+'e'](_0x5057ec,{'image':{'url':_0x3ed963},'caption':_0x3c63ed[_0x47a34d(0x175)](_0xed2ac1,_0x28269b),'footer':_0x3c63ed[_0x47a34d(0x169)]},{'quoted':_0x2fb322});}catch(_0x238018){console[_0x47a34d(0x185)](_0x3c63ed[_0x47a34d(0x144)](_0x3c63ed[_0x47a34d(0x14d)],_0x238018)),_0x3c63ed[_0x47a34d(0x155)](_0x357926,_0x3c63ed[_0x47a34d(0x144)](_0x3c63ed[_0x47a34d(0x14d)],_0x238018));}else _0x3c63ed[_0x47a34d(0x155)](_0x357926,_0x3c63ed[_0x47a34d(0x175)](_0xed2ac1,_0x28269b));}});
+    moment.tz.setDefault('Etc/GMT');
+
+// Créer une date et une heure en GMT
+const temps = moment().format('HH:mm:ss');
+const date = moment().format('DD/MM/YYYY');
+
+  let infoMsg =  `
+   *BMW MD IMPORTANT INFO* 
+❒───────────────────❒
+*GITHUB LINK*
+> https://github.com/ibrahimaitech/BMW-MD
+
+*WHATSAPP CHANNEL*
+> https://whatsapp.com/channel/0029VaZuGSxEawdxZK9CzM0Y
+
+*FOR MORE INFO TAP ON THE LINK BELOW*
+> https://github.com/IBRAHIM-TECH-AI/IBRAHIM-ADAMS-INFO⁠
+╭───────────────────❒
+│❒⁠⁠⁠⁠ *RAM* : ${format(os.totalmem() - os.freemem())}/${format(os.totalmem())}
+│❒⁠⁠⁠⁠ *DEV* : *Ibrahim Adams*
+⁠⁠⁠⁠╰───────────────────❒
+  `;
+    
+let menuMsg = `
+     𝑰𝑩𝑹𝑨𝑯𝑰𝑴 𝑨𝑫𝑨𝑴𝑺 𝑺𝑪𝑰𝑬𝑵𝑪𝑬
+
+❒────────────────────❒`;
+
+   var lien = mybotpic();
+
+   if (lien.match(/\.(mp4|gif)$/i)) {
+    try {
+        zk.sendMessage(dest, { video: { url: lien }, caption:infoMsg + menuMsg, footer: "Je suis *Beltahmd*, déveloper Beltah Tech" , gifPlayback : true }, { quoted: ms });
+    }
+    catch (e) {
+        console.log("🥵🥵 Menu erreur " + e);
+        repondre("🥵🥵 Menu erreur " + e);
+    }
+} 
+// Vérification pour .jpeg ou .png
+else if (lien.match(/\.(jpeg|png|jpg)$/i)) {
+    try {
+        zk.sendMessage(dest, { image: { url: lien }, caption:infoMsg + menuMsg, footer: "Je suis *Beltahmd*, déveloper Beltah Tech" }, { quoted: ms });
+    }
+    catch (e) {
+        console.log("🥵🥵 Menu erreur " + e);
+        repondre("🥵🥵 Menu erreur " + e);
+    }
+} 
+else {
+    
+    repondre(infoMsg + menuMsg);
+    
+}
+
+});*/
