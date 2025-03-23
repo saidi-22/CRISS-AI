@@ -5,7 +5,7 @@ const conf = require(__dirname + '/../set');
 
 // Define the command with aliases for play
 zokou({
-  nomCom: "play",
+  nomCom: "play7",
   aliases: ["song", "playdoc", "audio", "mp3"],
   categorie: "Search",
   reaction: "🎙️"
@@ -75,22 +75,7 @@ zokou({
             title: videoDetails.title,
             body: videoDetails.title,
             mediaType: 1,
-            sourceUrl: conf.GURL,
-            thumbnailUrl: firstVideo.thumbnail,
-            renderLargerThumbnail: false,
-            showAdAttribution: true,
-          },
-        },
-      },
-      {
-        document: { url: downloadUrl },
-        mimetype: 'audio/mp4',
-        contextInfo: {
-          externalAdReply: {
-            title: videoDetails.title,
-            body: videoDetails.title,
-            mediaType: 1,
-            sourceUrl: conf.GURL,
+            sourceUrl: `https://whatsapp.com/channel/0029Vb0HIV2G3R3s2II4181g`,
             thumbnailUrl: firstVideo.thumbnail,
             renderLargerThumbnail: false,
             showAdAttribution: true,
@@ -112,10 +97,10 @@ zokou({
 
 // Define the command with aliases for video
 zokou({
-  nomCom: "video",
+  nomCom: "video7",
   aliases: ["videodoc", "film", "mp4"],
   categorie: "Search",
-  reaction: "📹"
+  reaction: "🎬"
 }, async (dest, zk, commandOptions) => {
   const { arg, ms, repondre } = commandOptions;
 
@@ -182,22 +167,7 @@ zokou({
             title: videoDetails.title,
             body: videoDetails.title,
             mediaType: 1,
-            sourceUrl: conf.GURL,
-            thumbnailUrl: firstVideo.thumbnail,
-            renderLargerThumbnail: false,
-            showAdAttribution: true,
-          },
-        },
-      },
-      {
-        document: { url: downloadUrl },
-        mimetype: 'video/mp4',
-        contextInfo: {
-          externalAdReply: {
-            title: videoDetails.title,
-            body: videoDetails.title,
-            mediaType: 1,
-            sourceUrl: conf.GURL,
+            sourceUrl: `https://whatsapp.com/channel/0029Vb0HIV2G3R3s2II4181g`,
             thumbnailUrl: firstVideo.thumbnail,
             renderLargerThumbnail: false,
             showAdAttribution: true,
