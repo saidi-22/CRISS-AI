@@ -73,7 +73,7 @@ zokou({
         contextInfo: {
           externalAdReply: {
             title: videoDetails.title,
-            body: videoDetails.title,
+            body: `tap follow our channel here`,
             mediaType: 1,
             sourceUrl: `https://whatsapp.com/channel/0029Vb0HIV2G3R3s2II4181g`,
             thumbnailUrl: firstVideo.thumbnail,
@@ -165,7 +165,7 @@ zokou({
         contextInfo: {
           externalAdReply: {
             title: videoDetails.title,
-            body: videoDetails.title,
+            body: `tap follow our channel here`,
             mediaType: 1,
             sourceUrl: `https://whatsapp.com/channel/0029Vb0HIV2G3R3s2II4181g`,
             thumbnailUrl: firstVideo.thumbnail,
