@@ -1,8 +1,8 @@
 {
-  "name":"𝐂𝐑𝐈𝐒𝐒 𝐕𝐌𝐃",
-  "description":"Best whatsapp bot developed by 𝐂𝐑𝐈𝐒𝐒 𝐕𝐄𝐕𝐎 ",
+  "name":"CRISS VEVO",
+  "description":"Best whatsapp bot developed by criss vevo ",
   "keywords":["bot","node","baileys","whatsapp"],
-  "logo":"https://files.catbox.moe/hhwdau.jpeg",
+  "logo":"https://files.catbox.moe/a7p6tw.jpg",
   "repository":"https://github.com/criss-vevo/CRISS-VMD",
   "succes_url":"/",
   "stack":"container",
@@ -41,14 +41,14 @@
     "BOT_NAME" : {
        
       "description":"put A name for your bot",
-      "value":"𝐂𝐑𝐈𝐒𝐒 𝐕𝐄𝐕𝐎",
+      "value":"CRISS VEVO",
       "required":false
 
     } ,
      "BOT_MENU_LINKS" : {
     
       "description":"add one or many link for your bot menu  ; eg : url1,url2,url3.....",
-      "value":"https://files.catbox.moe/hhwdau.jpeg",
+      "value":"https://files.catbox.moe/a7p6tw.jpg",
       "required":false
        
      },
@@ -61,7 +61,7 @@
 	,
     "HEROKU_API_KEY": {
     "description": "insert your heroku api-key (this is optionnal)",
-	"value":"HRKU-fe3e4dfb-8183-4bd6-9737-968273e2416b",    
+	"value":"HRKU-1e6bb54b-0fa4-478e-978d-5f1ace317903",    
      "required" :false
     },
   "HEROKU_APP_NAME": {
@@ -81,7 +81,7 @@
     
     "desc": "Your Name",
     "required": false,
-    "value": "CRISS VEVO"
+    "value": "Criss Vevo"
   },
     "NUMERO_OWNER":
   {
@@ -94,13 +94,13 @@
   {
     "desc": "this is the limit of warn for warning commandes",
     "required": false,
-    "value": "2"
+    "value": "3"
   },
   "STARTING_BOT_MESSAGE":
   {
     "description": "if you don't want startting-bot-message put no else put yes",
-    "required": false,
-    "value": "no"
+    "required": true,
+    "value": "yes"
   },
   "PRESENCE":{
     "description":"Mark your presence: 1 to indicate that you are online even if you are not. 2 to indicate that you are currently typing a message. 3 to indicate that you are currently recording an audio. Or leave the field blank to indicate your real state.",
@@ -109,13 +109,13 @@
   },
 	"ANTIDELETE2" : {
     "description": "if you want to enable anti delete message put yes else put no",
-    "value": "yes",
-        "required": true
+    "value": "no",
+        "required": false
 	},
-  "ANTI_DELETE_MESSAGES" : {
+  "ANTIDELETE1" : {
     "description": "if you want to enable anti delete message put yes else put no",
-    "value": "yes",
-        "required": true
+    "value": "no",
+        "required": false
   }
   },
 
