@@ -32,11 +32,11 @@
  
 
 
-[`PAIRING CODE`](https://criss-md-3.onrender.com/pair)
+[`PAIRING CODE`](https://shorturl.at/M4UIH)
  
 
 
-[`SCAN QR CODE`](https://criss-md-3.onrender.com/qr)
+[`SCAN QR CODE`](https://shorturl.at/eyh2Z)
 
 
 
