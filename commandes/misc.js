@@ -1,4 +1,4 @@
-const axios = require('axios');
+const axios = require('zokou');
 const config = require('../config');
 const { cmd, commands } = require('../command');
 const util = require("util");
