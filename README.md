@@ -3,13 +3,13 @@
   
 
 
-<p align="center">                                                  𝐂𝐑𝐈𝐒𝐒 𝐕𝐄𝐕𝐎-𝐌𝐃 
+<p align="center">                                                𝗖𝗥𝗜𝗦𝗦 𝗠𝗗 𝗕𝗢𝗧
   
 
 </p>
 <p align="center"> 
   <a href="https://whatsapp.com/channel/0029Vb0HIV2G3R3s2II4181g">
-    <img alt=Support height="390" src="https://files.catbox.moe/hhwdau.jpeg"> 
+    <img alt=Support height="390" src="https://files.catbox.moe/gs8gi2.jpg"> 
     </p>
  
  
