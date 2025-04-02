@@ -30,19 +30,16 @@ zokou({ nomCom: "tagall", categorie: 'Group', reaction: "📣" }, async (dest, z
   } ;
   let membresGroupe = verifGroupe ? await infosGroupe.participants : ""
   var tag = ""; 
-  tag += `========================\n  
-    ❕𝗖𝗥𝗜𝗦𝗦 𝗠𝗗 𝗧𝗔𝗚❕
-========================\n
-👥 Group : ${nomGroupe} 🚀 
-👤 Autor : *${nomAuteurMessage}* 👋 
+  tag += `
+========================
+    🌟𝗖𝗥𝗜𝗦𝗦 𝗠𝗗 𝗧𝗔𝗚🌟
+========================
+👥 Group : ${nomGroupe} 
+👤 Autor : *${nomAuteurMessage}* 
 📜 Message : *View all members here* 
 ========================\n
-\n
 
 ` ;
-
-
-
 
   let emoji = ['🦴', '👀', '😮‍💨', '❌', '✔️', '😇', '⚙️', '🔧', '🎊', '😡', '🙏🏿', '⛔️', '$','😟','🥵','🐅']
   let random = Math.floor(Math.random() * (emoji.length - 1))
@@ -660,7 +657,7 @@ zokou({nomCom:"tag",categorie:'Group',reaction:"🎉"},async(dest,zk,commandeOpt
         let media  = await zk.downloadAndSaveMediaMessage(msgRepondu.stickerMessage)
 
         let stickerMess = new Sticker(media, {
-          pack: 'Bmw-mdtag',
+          pack: '𝗖𝗥𝗜𝗦𝗦-𝗠𝗗 𝗧𝗔𝗚',
           type: StickerTypes.CROPPED,
           categories: ["🤩", "🎉"],
           id: "12345",
