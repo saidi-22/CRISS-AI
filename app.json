@@ -1,9 +1,9 @@
 {
-  "name": "CRISS MD",
-  "description": "🚀 CRISS MD WhatsApp MultiDevice Bot – Your ultimate AI-powered assistant, built in Node.js to revolutionize WhatsApp automation! From smart replies to advanced moderation, experience seamless interaction like never before. 💡✨",
-  "logo": "https://files.catbox.moe/plqy41.jpg",
-  "keywords": ["CRISS-VEVO", "whatsapp-bot", "whatsapp-md-bot"],
-  "repository": "https://github.com/criss-vevo/CRISS-VMD",
+  "name": "CLOUD Ai",
+  "description": "🚀 CLOUD AI WhatsApp MultiDevice Bot – Your ultimate AI-powered assistant, built in Node.js to revolutionize WhatsApp automation! From smart replies to advanced moderation, experience seamless interaction like never before. 💡✨",
+  "logo": "https://files.catbox.moe/7jt69h.jpg",
+  "keywords": ["BERA-TECH", "whatsapp-bot", "whatsapp-md-bot"],
+  "repository": "https://github.com/DEVELOPER-BERA/CLOUD-AI",
   "stack": "container",
   "env": { 
   
@@ -20,12 +20,12 @@
     "OWNER_NAME": {
       "description": "Your name as the bot owner",
       "required": true,
-      "value": "CRISS MD"
+      "value": "BRUCE BERA"
     },
     "OWNER_NUMBER": {
       "description": "Your WhatsApp number",
       "required": true,
-      "value": "255687068672"
+      "value": "254743982206"
     },
     "AUTO_READ": {
       "description": "Enable bot to auto-read messages (true/false)",
