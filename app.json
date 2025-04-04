@@ -1,86 +1,146 @@
 {
   "name": "CRISS MD",
-  "description": "🌟 CRISS MD 🌟 WhatsApp MultiDevice Bot – Your ultimate AI-powered assistant, built in Node.js to revolutionize WhatsApp automation! From smart replies to advanced moderation, experience seamless interaction like never before. 💡✨",
+  "description": "This BOT was developed by Njabulo.",
+  "keywords": [
+    "bot",
+    "node",
+    "baileys",
+    "whatsapp"
+  ],
   "logo": "https://files.catbox.moe/plqy41.jpg",
-  "keywords": ["CRISS-VEVO", "whatsapp-bot", "whatsapp-md-bot"],
-  "repository": "https://chat.whatsapp.com/KRyCt8xsJNAEvgTnydm4YJ",
+  "repository": "https://github.com/criss-vevo/CRISS-VMD",
+  "succes_url": "/",
   "stack": "container",
-  "env": { 
-  
-    "SESSION_ID": {
-      "description": "put your session ID , the code you receive after scanning Qr code",
-      "required": true,
-      "value": ""
+  "env": {
+    "PREFIX": {
+      "description": "choose your prefix of bot",
+      "value": ".",
+      "required": true
     },
-    "MODE": {
-      "description": "Set to 'public' or 'private' to define bot mode",
-      "required": true,
-      "value": "public"
+    "AUTO_READ_STATUS": {
+      "description": "Your contact status will be read automatically(type yes to active or no to deactive  ; don't write in capital letter)",
+      "value": "yes",
+      "required": false
     },
-    "OWNER_NAME": {
-      "description": "Your name as the bot owner",
-      "required": true,
-      "value": "CRISS MD"
-    },
-    "OWNER_NUMBER": {
-      "description": "Your WhatsApp number",
-      "required": true,
-      "value": "255687068672"
+    "AUTO_DOWNLOAD_STATUS": {
+      "description": "Your contact status will be download automatically and send to you(type yes to active or no to deactive ; don't write in capital letter)",
+      "value": "no",
+      "required": false
     },
     "AUTO_READ": {
-      "description": "Enable bot to auto-read messages (true/false)",
-      "required": false,
-      "value": "false"
+      "description": "Your messages will be read automatically(type yes to active or no to deactive  ; don't write in capital letter)",
+      "value": "no",
+      "required": false
     },
-    "AUTO_TYPING": {
-      "description": "Enable bot to show typing status (true/false)",
-      "required": false,
-      "value": "false"
+    "ANTICALL": {
+      "description": "no calls on WhatsApp...reject automatically(type yes to active or no to deactive  ; don't write in capital letter)",
+      "value": "no",
+      "required": false
     },
-    "AUTO_RECORDING": {
-      "description": "Enable bot to show recording status (true/false)",
-      "required": false,
-      "value": "false"
+      "AUTO_REACT_STATUS": {
+      "description":"Enter yes for your bot to auto react status",
+      "value":"yes",
+      "required":false
+     },   
+     "CHAT_BOT" : {
+      "description" : "active bot to reply all messages received in pm", 
+      "value" : "no", 
+     "required" :false 
+     },
+    "AUTO_REPLY": {
+      "description": "Your contact messages will be replied automatically(type yes to active or no to deactive  ; don't write in capital letter)",
+      "value": "no",
+      "required": false
+     },
+    "ANTIVV": {
+      "description": "Detect all view once media and send them to your dm",
+      "value": "yes",
+      "required": false
     },
-    "ALWAYS_ONLINE": {
-      "description": "Keep bot always online (true/false)",
-      "required": false,
-      "value": "false"
+    "PM_PERMIT": {
+      "description": "Other user can't use your bot in pm (type yes to active or no to deactive ; don't write in capital letter)",
+      "value": "no",
+      "required": false
     },
-    "AUTO_REACT": {
-      "description": "Enable bot to auto-react to messages (true/false)",
-      "required": false,
-      "value": "false"
+    "ANTIDELETEDM": {
+      "description": "deleted messages will be detected lively.and sent directly after deletion",
+      "value": "yes",
+      "required": false
+     },
+    "AUTO_BIO": {
+      "description": "Set live time bio.",
+      "value": "yes",
+      "required": false
+     },
+    "ADMGROUP": {
+      "description": "deleted messages will be detected on live chat",
+      "value": "yes",
+      "required": false
     },
-    "ANTI_DELETE": {
-      "description": "Enable anti-delete feature (true/false)",
+    "BOT_NAME": {
+      "description": "put A name for your bot",
+      "value": "CRISS MD",
+      "required": false
+    },
+    "BOT_MENU_LINKS": {
+      "description": "add one or many link for your bot menu  ; eg : url1,url2,url3.....",
+      "value":"https://files.catbox.moe/plqy41.jpg",
+      "required": false
+    },
+    "PUBLIC_MODE": {
+      "description": "type yes to put your bot on public mode or no to put it on private mod",
+      "value": "yes",
+      "required": false 
+    },
+    "HEROKU_APY_KEY": {
+      "description": "insert your heroku api-key (OPTIONAL)",
+      "value" : "HRKU-6650b52e-9f81-4eda-8a1e-bfb12a79dd09", 
+      "required": false
+    },
+    "HEROKU_APP_NAME": {
+      "description": "insert your heroku APP NAME (OPTIONAL)",
+      "value" : "", 
+      "required": false
+    },
+    "SESSION_ID": {
+      "description": "put your session ID , the code you receive after scanning Qr code",
+      "value": "",
+      "required": true
+    },
+    "OWNER_NAME": {
+      "desc": "Your Name",
+      "required": false,
+      "value": "CRISS VEVO"
+    },
+    "NUMERO_OWNER": {
+      "desc": "Your number , dont put '+' and put you area code(exemple of togo '228')",
+      "required": false,
+      "value": "255687068672"
+    },
+    "WARN_COUNT": {
+      "desc": "this is the limit of warn for warning commandes",
+      "required": false,
+      "value": "2"
+    },
+    "STARTING_BOT_MESSAGE": {
+      "description": "if you don't want startting-bot-message put no else put yes",
       "required": true,
-      "value": "true"
+      "value": "no"
     },
-    "AUTO_STATUS_SEEN": {
-      "description": "Enable bot to view statuses (true/false)",
-      "required": false,
-      "value": "true"
+    "PRESENCE": {
+      "description": "Mark your presence: 1 to indicate that you are online even if you are not. 2 to indicate that you are currently typing a message. 3 to indicate that you are currently recording an audio. Or leave the field blank to indicate your real state.",
+      "value": "",
+      "required": false
     },
-    "AUTO_STATUS_REPLY": {
-      "description": "Enable bot to reply after viewing a status (true/false)",
-      "required": false,
-      "value": "false"
+    "ANTI_DELETE_MESSAGE": {
+      "description": "if you want to enable anti delete message put yes else put no",
+      "value": "yes",
+      "required": false
     },
-    "STATUS_READ_MSG": {
-      "description": "Set the message bot sends after viewing a status",
+    "AUTO_REACTION": {
+      "description": "Put yes if you want the bot to react to messages in private",
       "required": false,
-      "value": "*Status Seen*"
-    },
-    "AUTO_BLOCK": {
-      "description": "Enable bot to auto-block specific numbers (true/false)",
-      "required": false,
-      "value": "false"
-    },
-    "REJECT_CALL": {
-      "description": "Enable bot to reject incoming calls (true/false)",
-      "required": false,
-      "value": "false"
+      "value": "yes"
     }
   },
   "buildpacks": [
