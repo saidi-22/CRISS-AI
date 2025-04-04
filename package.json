@@ -1,16 +1,16 @@
 {
-  "name": " ᴊᴏᴇʟ xᴍᴅ ʙᴏᴛ",
+  "name": " CRISS MD BOT",
   "version": "10.8.1",
-  "description": "Joel James tech inc",
-  "main": "index.js",
+  "description": "Criss Vevo tech inc",
+  "main": "ibrahim.js",
   "type": "module",
   "scripts": {
-    "start": "pm2 start index.js --deep-monitoring --attach --name  ᴊᴏᴇʟ xᴍᴅ ʙᴏᴛ",
-    "stop": "pm2 stop  ᴊᴏᴇʟ xᴍᴅ ʙᴏᴛ",
-    "restart": "pm2 restart  ᴊᴏᴇʟ xᴍᴅ ʙᴏᴛ"
+    "start": "pm2 start ibrahim.js --deep-monitoring --attach --name  CRISS MD BOT",
+    "stop": "pm2 stop  CRISS MD BOT",
+    "restart": "pm2 restart  CRISS MD BOT"
   },
-  "keywords": ["lord-joel", "whatsapp-bot", "whatsapp md bot"],
-  "author": " ᴊᴏᴇʟ xᴍᴅ ʙᴏᴛ",
+  "keywords": ["lord-criss", "whatsapp-bot", "whatsapp md bot"],
+  "author": " CRISS MD BOT",
   "license": "ISC",
   "dependencies": {
     "@whiskeysockets/baileys": "npm:@fizzxydev/baileys-pro@8.5.12",
