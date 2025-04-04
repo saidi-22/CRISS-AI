@@ -131,7 +131,7 @@ function getCurrentDateTime() {
 setInterval(async () => {
     if (conf.AUTO_BIO === "yes") {
         const currentDateTime = getCurrentDateTime(); // Get the current date and time
-        const bioText = `CRISS MD BOT is online!\n${currentDateTime}`; // Format the bio text
+        const bioText = `𝗛𝗘𝗬 👋 𝗖𝗥𝗜𝗦𝗦 𝗠𝗗 𝗕𝗢𝗧 is Active!\n${currentDateTime}`; // Format the bio text
         await zk.updateProfileStatus(bioText); // Update the bio
         console.log(`Updated Bio: ${bioText}`); // Log the updated bio
     }
@@ -146,7 +146,7 @@ setInterval(async () => {
 
     await zk.rejectCall(callId, callerId);
     await zk.sendMessage(callerId, {
-      text: "Am Criss Md Bot,, My owner is unavailable try again later"
+      text: "Hi 👋 Am 𝗖𝗥𝗜𝗦𝗦 𝗠𝗗 𝗕𝗢𝗧,, My owner is unavailable please try again later"
     });
   }
 });
