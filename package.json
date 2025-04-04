@@ -3,15 +3,23 @@
   "version": "10.8.1",
   "description": "Criss Vevo tech inc",
   "main": "ibrahim.js",
-  "type": "module",
   "scripts": {
-    "start": "pm2 start ibrahim.js --deep-monitoring --attach --name  CRISS MD BOT",
-    "stop": "pm2 stop  CRISS MD BOT",
-    "restart": "pm2 restart  CRISS MD BOT"
+    "test": "node ibrahim.js",
+    "s": "node ibrahim.js",
+    "toshtech": "pm2 start ibrahim.js --attach",
+    "toshtech": "pm2 start ibrahim.js --attach",
+    "c": "tsc" 
   },
-  "keywords": ["lord-criss", "whatsapp-bot", "whatsapp md bot"],
-  "author": " CRISS MD BOT",
-  "license": "ISC",
+  "keywords": [
+    "bot",
+    "Baileys",
+    "Bmw-md",
+    "whatsapp",
+    "whatsapp-bot",
+    "bmw-md-boy"
+  ],
+  "author": "Tosh205",
+"license": "ISC",
   "dependencies": {
     "@whiskeysockets/baileys": "npm:@fizzxydev/baileys-pro@8.5.12",
     "@ffmpeg-installer/ffmpeg": "^1.1.0",
