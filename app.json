@@ -8,7 +8,7 @@
   "env": { 
   
     "SESSION_ID": {
-      "description": "Ensure your session Id starts with the word CLOUD-AI~$",
+      "description": "put your session ID , the code you receive after scanning Qr code",
       "required": true,
       "value": ""
     },
