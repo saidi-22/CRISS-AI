@@ -1,4 +1,4 @@
-<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Black+Ops+One&size=100&pause=1000&color=FF0000&center=true&width=1000&height=200&lines=KHAN-MD-V3.0" alt="Typing SVG" /></a>
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Black+Ops+One&size=100&pause=1000&color=FF0000&center=true&width=1000&height=200&lines=CRISS AI.0" alt="Typing SVG" /></a>
   </p>
   
 ---  
@@ -7,12 +7,12 @@
 ---
 
 ```
-KHAN-MD BY JawadTechX 💜 
+CRISS AI BY CRISS VEVO 💜 
 ```
 
 --- 
 
-<a><img src='https://cdn.ironman.my.id/i/9zd4if.jpg'/></a>
+<a><img src='https://files.catbox.moe/gs8gi2.jpg'/></a>
 
 ---
 
@@ -22,20 +22,20 @@ KHAN-MD BY JawadTechX 💜
 
 <div align="center">
   
-[![WhatsApp Channel](https://img.shields.io/badge/Join-WhatsApp%20Channel-FF00F8?style=big-square&logo=whatsapp)](https://whatsapp.com/channel/0029VatOy2EAzNc2WcShQw1j)
+[![WhatsApp Channel](https://img.shields.io/badge/Join-WhatsApp%20Channel-FF00F8?style=big-square&logo=whatsapp)](https://whatsapp.com/channel/0029Vb0HIV2G3R3s2II4181g)
 </div>
 
  <p align="center"><img src="https://profile-counter.glitch.me/{KHAN-MD}/count.svg" alt="XdTechPro :: Visitor's Count" old_src="https://profile-counter.glitch.me/{XdTechPro}/count.svg" /></p>
 
 
 <p align="center">
-<a href="https://github.com/XdTechPro/KHAN-MD"><img title="PUBLIC-BOT" src="https://img.shields.io/static/v1?label=Language&message=English&style=square&color=darkpink"></a> &nbsp;
-  <img src="https://komarev.com/ghpvc/?username=KHAN-MD&label=VIEWS&style=square&color=blue" />
+<a href="https://github.com/criss-vevo/CRISS-AI"><img title="PUBLIC-BOT" src="https://img.shields.io/static/v1?label=Language&message=English&style=square&color=darkpink"></a> &nbsp;
+  <img src="https://komarev.com/ghpvc/?username=CRISS-AI&label=VIEWS&style=square&color=blue" />
 </p>
 </p> 
 
 <p align="center">
-  <a href="https://github.com/XdTechPro/KHAN-MD"><img title="Release" src="https://img.shields.io/badge/Release-beta%20v3.0-cyan.svg?style=for-the-badge&logo=appveyor" /></a>
+  <a href="https://github.com/criss-vevo/CRISS-AI"><img title="Release" src="https://img.shields.io/badge/Release-beta%20v3.0-cyan.svg?style=for-the-badge&logo=appveyor" /></a>
 </p>
 
 
@@ -43,7 +43,7 @@ KHAN-MD BY JawadTechX 💜
 
 Start by forking this repository to your own GitHub account. Click the button below to fork:
 
-  <a href="https://github.com/XdTechPro/KHAN-MD/fork"><img title="KHAN-MD" src="https://img.shields.io/badge/FORK-KHAN MD-h?color=green&style=for-the-badge&logo=stackshare"></a>
+  <a href="https://github.com/criss-vevo/CRISS-AI/fork"><img title="CRISS-AI" src="https://img.shields.io/badge/FORK-CRISS AI-h?color=green&style=for-the-badge&logo=stackshare"></a>
 
 > Get Pair Code (Session ID)
 
