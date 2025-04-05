@@ -316,7 +316,7 @@ cmd({
 },
 async (conn, mek, m, { from, reply }) => {
     try {
-        const loadingMessage = await conn.sendMessage(from, { text: 'KHANX-AI🗿' });
+        const loadingMessage = await conn.sendMessage(from, { text: 'CRISS AI🗿' });
         
         // Define the ASCII art messages
         const asciiMessages = [
@@ -346,4 +346,4 @@ async (conn, mek, m, { from, reply }) => {
     }
 });
 
-// > JawadTechX 
+// > CRISS AI 
