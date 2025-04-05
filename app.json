@@ -79,7 +79,7 @@
     "AUTO_STATUS_MSG": {
       "description": "Type custom message on status reply",
       "required": true,
-      "value": "*STATUS SEEN*"
+      "value": "*SEEN YOUR STATUS BY CRISS AI*"
    
      }, 
     
