@@ -1,6 +1,6 @@
-name: khan-md
+name: Criss-Ai
 services:
-  - name: khan-md-service
+  - name: Criss-Ai-service
     type: web
     ports:
       - 5000
