@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "pm2 start index.js --deep-monitoring --attach --name CRISS-AI",
-    "stop": "pm2 stop CRISS-AI,
+    "stop": "pm2 stop CRISS-AI",
     "restart": "pm2 restart CRISS-AI"
   },
   "dependencies": {
